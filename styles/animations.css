@@ -94,10 +94,9 @@
   }
 }
 
-/* Анимация вспышки искр */
 @keyframes sparkFlash {
   from {
-    fill:transparent
+    fill:transparent;
   }
   to {
     fill:#FF0000;
