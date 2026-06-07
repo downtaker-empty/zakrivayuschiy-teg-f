@@ -101,3 +101,16 @@
 .like-icon:active .heart {
   animation: scaleHeart 0.3s ease-in 0.1s 1;
 }
+
+
+.is-liked .core {
+  fill: #FF0000; 
+}
+
+.is-liked .main-body {
+  fill: #FF0000; 
+}
+
+.is-liked .contour {
+  fill: #FF0000; 
+}
