@@ -71,7 +71,8 @@
 
 .section__header-title {
   font-size: 18px;
-  font-family: 'Inter';
+  font-family: 'Inter', sans-serif;
+  font-variation-settings: 'wght' 400;
   text-align: left;
 }
 
@@ -157,7 +158,8 @@ inline-size: 100%;
 }
 
 .section__discription-text {
-  font-family: 'Inter';
+  font-family: 'Inter', sans-serif;
+  font-variation-settings: 'wght' 400;
   font-size: 18px;
   line-height: 21px;
   font-weight: 410;
