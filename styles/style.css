@@ -38,13 +38,14 @@
   font-size: var(--fs-title);
   text-transform: uppercase;
   font-family: 'PressStart2P';
-
+  font-weight: 400;
 }
 
 .header-subtitle {
   font-size: var(--fs-subtitle);
   text-transform: uppercase;
   font-family: 'PressStart2P';
+  font-weight: 400;
 }
 
 /* Блок main*/
@@ -55,12 +56,10 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 52px;
-    margin: 0px auto;
+  margin: 0px auto;
 }
 
 .section {
-  min-block-size: 956px;
-  max-block-size: 100vh;
   background-color: #fff;
   border: 2px solid #000;
 }
@@ -91,13 +90,16 @@ inline-size: 100%;
   font-family: 'PressStart2P';
   -webkit-text-stroke: 1px #fff;
   text-transform: uppercase;
+  z-index: 1;
 }
 
-.section__image img{
+.section__image img {
   inline-size: 100%;
   block-size: auto;
   display: block;
 }
+
+/*Стили с фильтрами для картинки*/
 
 .image-saturate {
   filter: saturate(300%);
@@ -116,16 +118,27 @@ inline-size: 100%;
 }
 
 .image-contrast {
-  filter: contrast(20%)
+  filter: contrast(200%)
 }
 
 .image-brightness {
   filter: brightness(200%);
 }
 
-.image-huerotate{
-  filter: hue-rotate(-90deg);
+.image-huerotate {
+  filter: hue-rotate(-100deg);
 }
+
+.image-multi {
+  filter: blur(5px) brightness(20%);  
+}
+
+.image-multi2 {
+  filter: blur(5px) invert(1);  
+}
+
+
+/*Блок описания карточки*/
 
 .section__discription {
   padding: 25px;
@@ -146,36 +159,12 @@ inline-size: 100%;
   justify-content: end;
 }
 
-.button {
-  position: relative;
-  background-color: #fff;
-  border: none;
-}
-
-.button::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  inline-size: 100%;
-  block-size: 100%;
-  background-color:#fff;
-  mix-blend-mode: difference;
-  z-index: 1; 
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.5s ease-in-out;
-}
-
-.button:hover::before {
-  transform: scaleX(1);
-}
+/*Блок кнопок*/
 
 .card__like-button {
   inline-size: 130px;
   block-size:38px;
-  border: 2px solid #000;
-  padding: 12.5px 37px;
+  padding: 12.5px auto;
 }
 
 .button__text {
@@ -187,9 +176,27 @@ inline-size: 100%;
 
 .button-save {
   padding: 17px 20px;
-  inline-size: 335px;
-  margin: auto;
+  margin: auto auto 100px;
+  display: flex;
+  flex-direction: row;
+  gap:8px;
+  align-items: center;
+  justify-content: center;
+
 }
+
+@media (max-width: 375px) {
+  .button-save {
+    flex-direction: column;
+  }
+}
+
+.card__icon-button {
+  border: none;
+  background-color: #fff;
+}
+
+/* Блок popup */
 
 .save-dialog[open] {
   position: fixed;
@@ -203,7 +210,7 @@ inline-size: 100%;
   gap:30px;
 }
 
-.save-dialog[open]::backdrop{
+.save-dialog[open]::backdrop {
   backdrop-filter: brightness(20%);
 }
 
@@ -216,11 +223,10 @@ inline-size: 100%;
   font-family: 'PressStart2P';
   font-size: 14px;
   line-height: 150%;
+  text-transform: uppercase;
 }
 
 .dialog-btn {
   inline-size: 100%;
-  padding: 12.5px;
-  border: 2px solid #000;
-  background-color: #fff;
+  padding: 10px 0px;
 }

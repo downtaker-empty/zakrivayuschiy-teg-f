@@ -6,4 +6,9 @@
               linear-gradient(to bottom,#e7e7e7 0.01%,#1a1a1a 100%);
   --fs-title: clamp(3.0625rem, 2.7768rem + 1.4286vw, 4.0625rem);
   --fs-subtitle: clamp(0.875rem, 0.7143rem + 0.8036vw, 1.4375rem);
+  
+  --core-fill: transparent;
+  --contour-fill:#000;
+  --main-body-fill: transparent;
+  --sparks-fill: transparent;
 }
