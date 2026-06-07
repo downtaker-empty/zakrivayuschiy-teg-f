@@ -130,11 +130,11 @@ inline-size: 100%;
 }
 
 .image-multi {
-  filter: blur(5px) brightness(20%);  
+  filter: blur(5px) brightness(20%);
 }
 
 .image-multi2 {
-  filter: blur(5px) invert(1);  
+  filter: blur(5px) invert(1);
 }
 
 
@@ -155,7 +155,7 @@ inline-size: 100%;
 }
 
 .section__discription-buttons {
-  display: flex; 
+  display: flex;
   justify-content: end;
 }
 
@@ -182,8 +182,24 @@ inline-size: 100%;
   gap:8px;
   align-items: center;
   justify-content: center;
-
 }
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  border: 2px solid #000;
+}
+
+.card__like-button:focus {
+  outline: none;
+}
+
+.card__like-button:focus-visible {
+  filter: drop-shadow(2px 2px #000);
+}
+
 
 @media (max-width: 375px) {
   .button-save {
