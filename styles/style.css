@@ -93,6 +93,15 @@ inline-size: 100%;
   z-index: 1;
 }
 
+
+@supports (-webkit-text-stroke:1px #fff) {
+
+  .watermark {
+    -webkit-text-stroke: 1px #fff;
+  }
+ 
+}
+
 .section__image img {
   inline-size: 100%;
   block-size: auto;
