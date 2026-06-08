@@ -73,8 +73,9 @@
 }
 
 .card__image {
-position: relative;
-inline-size: 100%;
+  position: relative;
+  inline-size: 100%;
+  border-block: 2px solid #000;
 }
 
 .watermark {
