@@ -11,4 +11,7 @@
   --contour-fill:#000;
   --main-body-fill: transparent;
   --sparks-fill: transparent;
+
+  --font-main: 'PressStart2P', monospace;
+  --font-text: 'Inter', sans-serif;
 }

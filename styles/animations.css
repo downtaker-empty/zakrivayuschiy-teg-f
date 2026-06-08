@@ -10,42 +10,6 @@
 
 */
 
-.button {
-  position: relative;
-  background-color: #fff;
-  border: 2px solid #000;
-}
-
-.button:focus {
-  outline: none;
-}
-
-.button:focus-visible {
-  filter: drop-shadow(2px 2px #000);
-  transition: filter 0.3s ease;
-}
-
-
-.button::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  inline-size: 100%;
-  block-size: 100%;
-  background-color:#fff;
-  mix-blend-mode: difference;
-  z-index: 1;
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.5s ease-in-out;
-}
-
-.button:hover::before {
-  transform: scaleX(1);
-}
-
-
 .contour {
   fill: var(--contour-fill);
   transition: fill 0.1s linear;
@@ -103,7 +67,7 @@
   }
 }
 
-.like-icon:active .sparks {
+.like-icon.is-liked .sparks {
   animation: sparkFlash 0.3s ease-in 0.3s 1 ;
 }
 
